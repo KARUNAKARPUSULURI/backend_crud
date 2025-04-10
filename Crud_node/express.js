@@ -1,7 +1,10 @@
 import express from "express";
 import fs, { readFile } from "fs";
+import cors from "cors";
+
 
 const app = express()
+app.use(cors())
 app.use(express.json()) //{name : {}}
 app.use(express.urlencoded({extended : true}))
 const usersFilePath = "users.json"

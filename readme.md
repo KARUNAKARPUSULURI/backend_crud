@@ -1,107 +1,64 @@
-[Function: createApplication] {
-  application: {
-    init: [Function: init],
-    defaultConfiguration: [Function: defaultConfiguration],
-    handle: [Function: handle],
-    use: [Function: use],
-    route: [Function: route],
-    engine: [Function: engine],
-    param: [Function: param],
-    set: [Function: set],
-    path: [Function: path],
-    enabled: [Function: enabled],
-    disabled: [Function: disabled],
-    enable: [Function: enable],
-    disable: [Function: disable],
-    acl: [Function (anonymous)],
-    bind: [Function (anonymous)],
-    checkout: [Function (anonymous)],
-    connect: [Function (anonymous)],
-    copy: [Function (anonymous)],
-    delete: [Function (anonymous)],
-    get: [Function (anonymous)],
-    head: [Function (anonymous)],
-    link: [Function (anonymous)],
-    lock: [Function (anonymous)],
-    'm-search': [Function (anonymous)],
-    merge: [Function (anonymous)],
-    mkactivity: [Function (anonymous)],
-    mkcalendar: [Function (anonymous)],
-    mkcol: [Function (anonymous)],
-    move: [Function (anonymous)],
-    notify: [Function (anonymous)],
-    options: [Function (anonymous)],
-    patch: [Function (anonymous)],
-    post: [Function (anonymous)],
-    propfind: [Function (anonymous)],
-    proppatch: [Function (anonymous)],
-    purge: [Function (anonymous)],
-    put: [Function (anonymous)],
-    rebind: [Function (anonymous)],
-    report: [Function (anonymous)],
-    search: [Function (anonymous)],
-    source: [Function (anonymous)],
-    subscribe: [Function (anonymous)],
-    trace: [Function (anonymous)],
-    unbind: [Function (anonymous)],
-    unlink: [Function (anonymous)],
-    unlock: [Function (anonymous)],
-    unsubscribe: [Function (anonymous)],
-    all: [Function: all],
-    render: [Function: render],
-    listen: [Function: listen]
+USERS -> 
+[{},{},{}]
+POSTS -> 
+{
+  Models : ["users.json", "posts.json"],
+  Routes : ["usersRoute.js", "postRoute.js"]
+}
+FRONTEND : {
+  node_modules : {...},
+  public : {},
+  src -> {
+    app.jsx,
+    main.jsx,
+    app.css,
+    index.css,
+    Components - > {
+
+    },
+    Pages -> {
+      ...
+    },
+    Data -> {
+      ....
+    },
+    Services -> {
+      ....
+    },
+    redux : {
+
+    }
+  }
+  index.html,
+  .env,
+  .gitignore,
+  .dockers,
+  .nginx
+}
+
+router.get -> 
+router.post
+
+BACKEND -> {
+  Models : {
+    users.json,
+    posts.json
   },
-  request: IncomingMessage {
-    header: [Function: header],
-    get: [Function: header],
-    accepts: [Function (anonymous)],
-    acceptsEncodings: [Function (anonymous)],
-    acceptsCharsets: [Function (anonymous)],
-    acceptsLanguages: [Function (anonymous)],
-    range: [Function: range],
-    query: [Getter],
-    is: [Function: is],
-    protocol: [Getter],
-    secure: [Getter],
-    ip: [Getter],
-    ips: [Getter],
-    subdomains: [Getter],
-    path: [Getter],
-    host: [Getter],
-    hostname: [Getter],
-    fresh: [Getter],
-    stale: [Getter],
-    xhr: [Getter]
+  Routes : {
+    userRoutes : {
+      usersRoutes.js -> get, post, put, delete
+    },
+    postRoutes : {
+      postRoutes.js -> get, post, put, delete
+    }
   },
-  response: ServerResponse {
-    status: [Function: status],
-    links: [Function (anonymous)],
-    send: [Function: send],
-    json: [Function: json],
-    jsonp: [Function: jsonp],
-    sendStatus: [Function: sendStatus],
-    sendFile: [Function: sendFile],
-    download: [Function: download],
-    type: [Function: contentType],
-    contentType: [Function: contentType],
-    format: [Function (anonymous)],
-    attachment: [Function: attachment],
-    append: [Function: append],
-    header: [Function: header],
-    set: [Function: header],
-    get: [Function (anonymous)],
-    clearCookie: [Function: clearCookie],
-    cookie: [Function (anonymous)],
-    location: [Function: location],
-    redirect: [Function: redirect],
-    vary: [Function (anonymous)],
-    render: [Function: render]
+  Controllers : {
+    userControllers : {
+      userController -> logic(get, post, put, delete)
+    }
+    postControllers: {
+      postController -> logic(get, post, put, delete)
+    }
   },
-  Route: [Function: Route],
-  Router: [Function: Router] { Route: [Function: Route] },
-  json: [Function: json],
-  raw: [Function: raw],
-  static: [Function: serveStatic],
-  text: [Function: text],
-  urlencoded: [Function: urlencoded]
+  server.js
 }
